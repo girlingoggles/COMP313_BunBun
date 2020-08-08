@@ -1,0 +1,21 @@
+BunBun-
+	BunBun is the Player's Pawn. Controlled on screen with 'WASD' and the spacebar, the BunBun overlaps ("eats") the Drops to gain health (starting value 50%), and loses health if actively attempting to move (holding down WASD or space). The game ends when BunBun runs out of health (dies) or gets to 100% health (wins). 
+	BunBun is a Sphere with an Ocean Water material. It reacts to physics and gravity. BunBun created a DIE or WIN widget (final screen) upon 0% or 100% health, respectively, which acts as a scorekeeper of sorts. 
+
+Drop-
+	Drops are the NPCs that BunBun eats. Drops move around randomly on their own, usually quite slowly, and add 10% to BunBun's health as well as momentarily changing BunBun's color (custom C++ node) and making an exploding sound (play sounds) when they are eaten (destroy objects). When there is one (or less) drop left on screen, it creates another one (creates objects). The cycle continues indefinitely, until the game is finished. 
+
+Camera-
+	The camera follows at a fixed position behind BunBun, without rotating around it.  
+
+Menu- 
+	The Menu is the starting screen that lets you go to the settings menu to choose settings (high or low resolution, only works in standalone game mode, not Unreal's Play mode), and whether to play (Restart a level) or quit. The Menu and settings are the same widget, just have hidden and visible switched on click.
+HUD- 
+	The HUD shows BunBun's name in the upper left corner, and its health in the upper right. Health decreases while player is attempting to move BunBun, and increases upon Drop consumption. On holding Q, a button appears to go back to the main menu and start over, which disappears on release.
+WIN-
+	The Win screen displays when BunBun's health reaches 100%. It gives options to quit or return to the main menu and start over.
+DIE-
+	The Die screen displays when BunBun's health reaches 0%. It gives options to quit or return to the main menu and start over.
+World-
+	World is made of UE's Starter Content and is a fenced playing area which neither BunBun nor the Drops can exit. The world has a background noise.
+
