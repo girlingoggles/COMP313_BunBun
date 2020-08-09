@@ -6,7 +6,7 @@ Drop-
 	Drops are the NPCs that BunBun eats. Drops move around randomly on their own, usually quite slowly, and add 10% to BunBun's health as well as momentarily changing BunBun's color (custom C++ node) and making an exploding sound (play sounds) when they are eaten (destroy objects). When there is one (or less) drop left on screen, it creates another one (creates objects). The cycle continues indefinitely, until the game is finished. 
 
 Camera-
-	The camera follows at a fixed position behind BunBun, without rotating around it.  
+	The camera follows at a fixed position slightly behind and above BunBun, without rotating around it (Fixed XYZ relative to BunBun).   
 
 Menu- 
 	The Menu is the starting screen that lets you go to the settings menu to choose settings (high or low resolution, only works in standalone game mode, not Unreal's Play mode), and whether to play (Restart a level) or quit. The Menu and settings are the same widget, just have hidden and visible switched on click.
@@ -17,5 +17,5 @@ WIN-
 DIE-
 	The Die screen displays when BunBun's health reaches 0%. It gives options to quit or return to the main menu and start over.
 World-
-	World is made of UE's Starter Content and is a fenced playing area which neither BunBun nor the Drops can exit. The world has a background noise.
+	World is made of UE's Starter Content and is a fenced playing area which neither BunBun nor the Drops can exit due to an invisible ceiling and a navmesh box. The world has two height levels in the main playable Level (the grassy area and a walled wooden deck accessed by jumping or stairs), several bushes (no collision), a big rock (collidable), and background noise. 
 
